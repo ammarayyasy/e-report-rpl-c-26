@@ -65,9 +65,16 @@
     <section id="reports">
         <div class="container">
             <!-- judul -->
-            <div class="text-center">
-                <h1 class="fw-bold text-primary-emphasis">Semua Laporan</h1>
-                <p class="text-muted lh-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, mollitia doloremque velit molestiae deserunt expedita, sed assumenda tenetur consectetur provident aut impedit reiciendis unde saepe?</p>
+            <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="fw-bold text-primary-emphasis">Semua Laporan</h1>
+                    <p class="text-muted lh-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, mollitia doloremque velit molestiae deserunt expedita, sed assumenda tenetur consectetur provident aut impedit reiciendis unde saepe?</p>
+                </div>
+                <div class="col-lg-2">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary w-100"> 
+                        <i class="fa-solid fa-plus me-1"></i> Tambah Laporan
+                    </button>
+                </div>
             </div>
 
             <!-- filter & search -->
@@ -75,7 +82,7 @@
                 <div class="col-md-4">
                     <input type="text" class="form-control shadow-sm" placeholder="Cari laporan...">
                 </div>
-                <div class="col-md-3">
+                <div class="col">
                     <select class="form-select">
                         <option value="">Pilih Kategori</option>
                         <option value="">Akademik</option>
@@ -83,7 +90,7 @@
                         <option value="">Anonymous</option>
                     </select>
                 </div>
-                <div class="col-md-3">
+                <div class="col">
                     <select class="form-select">
                         <option value="">Urutkan</option>
                         <option value="">Terbaru</option>
@@ -231,6 +238,49 @@
             </nav>
         </div>
     </section>
+
+    <!-- Add Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h1 class="modal-title fs-5 fw-semibold" id="exampleModalLabel">
+                    <i class="fa-solid fa-pen-to-square me-2"></i> Form Tambah Laporan
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="">
+                <div style="padding: 3rem;" class="modal-body">
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold" for="">Judul Laporan:</label>
+                        <input class="form-control shadow-sm" type="text" placeholder="Tulis judul laporan...">
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold" for="">Pilih Kategori:</label>
+                        <select class="form-select shadow-sm">
+                            <option value="">Pilih kategori...</option>
+                            <option value="akademik">Akademik</option>
+                            <option value="fasilitis">Fasilitas</option>
+                            <option value="anonymous">Anonymous</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold" for="">Isi Laporan:</label>
+                        <textarea rows="6" class="form-control shadow-sm" placeholder="Tulis isi laporan..."></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold" for="">Uploud Gambar:</label>
+                        <input type="file" class="form-control" accept="image/*">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Kirim</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
 
     <!-- footer -->
     <footer class="bg-primary py-5">
